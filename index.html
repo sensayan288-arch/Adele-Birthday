@@ -3,203 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forever & Always ❤️</title>
-
+<title>For Adele — Forever & Always ❤️</title>
+<meta name="theme-color" content="#ff6f91">
 <style>
-:root{
-    --pink:#ff758c;
-    --pink2:#ff7eb3;
-    --dark:#d94f68;
-    --soft:#ffe5ec;
-    --glass:rgba(255,255,255,.78);
-}
+:root{--p:#ff5f87;--p2:#ff9ab4;--deep:#c93660;--ink:#5d4550;--cream:#fff8fa;--glass:rgba(255,255,255,.62)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-    min-height:100vh;
-    padding:16px;
-    overflow-x:hidden;
-    color:#555;
-    font-family:"Segoe UI",Roboto,Arial,sans-serif;
-    background:
-      radial-gradient(circle at 15% 10%,rgba(255,255,255,.8),transparent 25%),
-      linear-gradient(135deg,#ffe5ec,#ffc2d1);
-}
-#hearts{
-    position:fixed;inset:0;width:100%;height:100%;
-    z-index:0;pointer-events:none;
-}
-.container{
-    position:relative;z-index:2;
-    max-width:800px;margin:auto;
-    display:flex;flex-direction:column;gap:20px;
-}
-.card{
-    padding:28px 22px;
-    border-radius:24px;
-    text-align:center;
-    background:var(--glass);
-    border:1px solid rgba(255,255,255,.55);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    box-shadow:0 10px 35px rgba(222,84,106,.13);
-}
-.hero{padding:36px 20px}
-.hero-heart{font-size:52px;display:block;animation:beat 1.5s infinite}
-@keyframes beat{50%{transform:scale(1.18)}}
-h1,h2{color:var(--dark)}
-h1{font-size:clamp(30px,7vw,46px);margin:8px 0 12px}
-h2{font-size:clamp(21px,5vw,28px);margin-bottom:10px}
-.subtitle{font-style:italic;color:#777}
-.note{font-size:12px;color:#999;margin-top:10px}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin-top:18px;
-}
-.photo{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    border-radius:18px;
-    border:4px solid white;
-    box-shadow:0 7px 20px rgba(0,0,0,.1);
-    cursor:pointer;
-    transition:.25s;
-}
-.photo:hover{transform:translateY(-4px) scale(1.02)}
-
-.counter{
-    display:flex;justify-content:center;flex-wrap:wrap;
-    gap:9px;margin-top:17px;
-}
-.box{
-    min-width:72px;padding:11px 8px;
-    border-radius:15px;background:white;
-    box-shadow:0 4px 14px rgba(0,0,0,.06);
-}
-.box span{display:block;font-size:25px;font-weight:700;color:var(--dark)}
-.box label{font-size:9px;letter-spacing:1px;color:#888;text-transform:uppercase}
-
-.secret{
-    border:2px dashed var(--pink);
-    background:linear-gradient(135deg,#fff0f3,#ffe3e8);
-}
-.lock{font-size:44px;margin:8px 0 12px;animation:pulse 2s infinite}
-@keyframes pulse{50%{transform:scale(1.08)}}
-.message{
-    display:none;
-    text-align:left;
-    white-space:pre-wrap;
-    color:var(--dark);
-    font-size:17px;
-    line-height:1.8;
-    animation:appear .7s ease;
-}
-@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.message strong:first-child{font-size:20px}
-
-.song-title{font-weight:600;margin:5px 0 18px}
-.song-button{
-    border:0;border-radius:30px;padding:12px 24px;
-    color:white;font-size:15px;font-weight:700;
-    cursor:pointer;
-    background:linear-gradient(135deg,var(--pink),var(--pink2));
-    box-shadow:0 7px 20px rgba(255,117,140,.3);
-    transition:.25s;
-}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:#fff0f5;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 20% 10%,#fff 0,transparent 28%),radial-gradient(circle at 90% 35%,#ffd8e4 0,transparent 25%),linear-gradient(145deg,#fff3f7,#ffd2df 48%,#fff6f8);animation:bg 14s ease-in-out infinite alternate}
+@keyframes bg{to{filter:hue-rotate(10deg);transform:scale(1.03)}}
+#hearts{position:fixed;inset:0;z-index:0;pointer-events:none}
+main{position:relative;z-index:2;max-width:900px;margin:auto;padding:14px 14px 60px}
+section{margin:18px 0}
+.glass{background:var(--glass);border:1px solid rgba(255,255,255,.78);box-shadow:0 18px 60px rgba(175,63,91,.12);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:30px}
+.hero{min-height:82vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:45px 20px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(255,133,164,.23),transparent 68%);animation:orb 5s ease-in-out infinite}
+@keyframes orb{50%{transform:scale(1.35);opacity:.65}}
+.hero-content{position:relative;z-index:1}
+.kicker{font:600 12px "Segoe UI",sans-serif;letter-spacing:4px;text-transform:uppercase;color:#a66b7c}
+.big-heart{font-size:76px;display:block;filter:drop-shadow(0 10px 20px rgba(255,95,135,.3));animation:heartbeat 1.6s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.16)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+h1{font-size:clamp(42px,11vw,78px);line-height:.95;color:#c93660;margin:20px 0 16px;letter-spacing:-2px}
+.hero p{font-size:18px;line-height:1.7;max-width:600px;margin:auto;color:#765967}
+.enter{display:inline-block;margin-top:28px;padding:13px 23px;border-radius:99px;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;text-decoration:none;font:700 14px "Segoe UI",sans-serif;box-shadow:0 10px 30px rgba(255,95,135,.28);transition:.3s}
+.enter:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(255,95,135,.38)}
+.card{padding:30px 24px;text-align:center}
+h2{color:var(--deep);font-size:clamp(25px,6vw,35px);margin-bottom:9px}
+.lead{color:#876775;font-size:15px;line-height:1.7}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+.gallery{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:1fr 1fr;gap:12px;margin-top:22px}
+.photo{width:100%;height:100%;min-height:170px;object-fit:cover;border-radius:22px;border:4px solid rgba(255,255,255,.9);box-shadow:0 12px 30px rgba(85,40,55,.12);cursor:pointer;transition:.45s}
+.photo:first-child{grid-row:span 2;min-height:350px}
+.photo:hover{transform:scale(1.025) rotate(-.5deg);box-shadow:0 18px 38px rgba(201,54,96,.22)}
+.section-label{font:700 11px "Segoe UI",sans-serif;letter-spacing:3px;text-transform:uppercase;color:#b47788;margin-bottom:8px}
+.timeline{position:relative;margin:25px auto 5px;max-width:650px;text-align:left}
+.timeline:before{content:"";position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(var(--p2),transparent)}
+.event{position:relative;padding:0 0 25px 48px}
+.dot{position:absolute;left:8px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--p);box-shadow:0 0 0 6px rgba(255,111,145,.12)}
+.event h3{color:#a43d5e;font-size:18px;margin-bottom:4px}
+.event p{line-height:1.6;color:#78606b}
+.counter{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-top:20px}
+.box{min-width:78px;padding:13px 8px;background:rgba(255,255,255,.86);border-radius:18px;box-shadow:0 7px 20px rgba(80,30,45,.07)}
+.box span{display:block;font:bold 25px "Segoe UI",sans-serif;color:var(--deep)}
+.box label{font:10px "Segoe UI",sans-serif;letter-spacing:1px;text-transform:uppercase;color:#927681}
+.birthday{background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(255,218,229,.75));overflow:hidden;position:relative}
+.birthday:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,111,145,.12);top:-100px;right:-70px}
+.cake{font-size:58px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px) rotate(2deg)}}
+.secret{border:2px dashed rgba(255,95,135,.45);background:linear-gradient(135deg,rgba(255,249,251,.82),rgba(255,226,235,.72))}
+.lock{font-size:48px;animation:pulse 2s infinite}
+@keyframes pulse{50%{transform:scale(1.1)}}
+.message{display:none;text-align:left;white-space:pre-wrap;line-height:1.85;color:#9e3c5c;font-size:17px;padding:22px;border-radius:20px;background:rgba(255,255,255,.7);animation:letter .8s ease}
+@keyframes letter{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:none}}
+.letter-icon{font-size:43px}
+.song{overflow:hidden}
+.song-button{border:0;border-radius:99px;padding:13px 25px;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;font:700 14px "Segoe UI",sans-serif;cursor:pointer;box-shadow:0 9px 25px rgba(255,95,135,.25);transition:.3s}
 .song-button:hover{transform:translateY(-3px)}
-.youtube{
-    display:none;width:100%;max-width:560px;
-    aspect-ratio:16/9;margin:18px auto 0;
-    overflow:hidden;border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.16);
-}
+.youtube{display:none;width:100%;max-width:650px;aspect-ratio:16/9;margin:18px auto 0;border-radius:22px;overflow:hidden;box-shadow:0 15px 40px rgba(50,20,30,.18)}
 .youtube iframe{width:100%;height:100%;border:0}
-
-.birthday-active{
-    animation:glow 1.7s infinite alternate;
-}
-@keyframes glow{
-    from{box-shadow:0 10px 35px rgba(222,84,106,.13)}
-    to{box-shadow:0 10px 48px rgba(255,117,140,.5)}
-}
-
-.lightbox{
-    display:none;position:fixed;inset:0;z-index:20;
-    background:rgba(0,0,0,.82);
-    align-items:center;justify-content:center;
-    padding:20px;
-}
-.lightbox img{
-    max-width:95vw;max-height:90vh;
-    object-fit:contain;border-radius:18px;
-}
-.close{
-    position:absolute;right:20px;top:15px;
-    color:white;font-size:34px;cursor:pointer;
-}
-
-@media(max-width:600px){
-    body{padding:10px}
-    .card{padding:23px 15px;border-radius:20px}
-    .gallery{gap:6px}
-    .photo{border-width:3px;border-radius:13px}
-    .box{min-width:66px}
-    .box span{font-size:21px}
-    .message{font-size:16px}
-}
+.final{padding:48px 25px;position:relative;overflow:hidden}
+.final .quote{font-size:clamp(25px,6vw,40px);line-height:1.25;color:#bd3d61;margin:15px auto;max-width:700px}
+.signature{font:italic 17px Georgia,serif;color:#89616e;margin-top:22px}
+.footer{font:12px "Segoe UI",sans-serif;color:#a7838e;text-align:center;padding:15px}
+.lightbox{display:none;position:fixed;inset:0;z-index:50;background:rgba(35,12,22,.9);align-items:center;justify-content:center;padding:20px}
+.lightbox img{max-width:94vw;max-height:88vh;border-radius:20px;box-shadow:0 20px 70px rgba(0,0,0,.4)}
+.close{position:absolute;right:20px;top:10px;color:white;font:40px Arial;cursor:pointer}
+.confetti{position:fixed;z-index:40;pointer-events:none;font-size:20px;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg);opacity:0}}
+@media(max-width:600px){main{padding:8px 9px 40px}.hero{min-height:76vh;border-radius:24px}.card{padding:25px 16px;border-radius:24px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}.photo:first-child{grid-row:span 2;min-height:260px}.box{min-width:66px}.box span{font-size:21px}.message{font-size:16px}}
 </style>
 </head>
-
 <body>
-
 <canvas id="hearts"></canvas>
+<main>
+<section class="hero glass">
+<div class="hero-content">
+<div class="kicker">A little corner of the internet</div>
+<span class="big-heart">💗</span>
+<h1>For Adele</h1>
+<p>Some things are too special to fit inside a text message.<br>So I made you a little world instead. ❤️</p>
+<a class="enter" href="#story">Enter our little story ↓</a>
+</div>
+</section>
 
-<div class="container">
+<section id="story" class="glass card reveal">
+<div class="section-label">Our story</div>
+<h2>One beautiful beginning. ❤️</h2>
+<p class="lead">Every relationship has a beginning. Ours has a date worth remembering forever.</p>
+<div class="timeline">
+<div class="event"><span class="dot"></span><h3>July 13, 2026</h3><p>The day our journey began. A small date on a calendar, but a huge date in my heart.</p></div>
+<div class="event"><span class="dot"></span><h3>Every day after</h3><p>More memories, more reasons to smile, and another chapter waiting to be written.</p></div>
+<div class="event"><span class="dot"></span><h3>October 24, 2026</h3><p>A day that belongs to someone very special — your birthday. 🎂</p></div>
+</div>
+</section>
 
-    <section class="card hero">
-        <span class="hero-heart">💖</span>
-        <h1>Forever & Always</h1>
-        <p class="subtitle">Every second with you is a blessing.</p>
-    </section>
+<section class="glass card reveal">
+<div class="section-label">Memories</div>
+<h2>Three little pieces of you 📸</h2>
+<p class="lead">Tap any photo to see it a little closer.</p>
+<div class="gallery">
+<img class="photo" src="photo1.jpg" alt="Adele memory 1" onclick="showPhoto(this.src)">
+<img class="photo" src="photo2.jpg" alt="Adele memory 2" onclick="showPhoto(this.src)">
+<img class="photo" src="photo3.jpg" alt="Adele memory 3" onclick="showPhoto(this.src)">
+</div>
+</section>
 
-    <section class="card">
-        <h2>Our Beautiful Moments 📸</h2>
-        <div class="gallery">
-            <img class="photo" src="photo1.jpg" alt="Our memory 1" onclick="showPhoto(this.src)">
-            <img class="photo" src="photo2.jpg" alt="Our memory 2" onclick="showPhoto(this.src)">
-            <img class="photo" src="photo3.jpg" alt="Our memory 3" onclick="showPhoto(this.src)">
-        </div>
-        <p class="note">Three little memories, one beautiful story. ❤️</p>
-    </section>
+<section class="glass card reveal">
+<div class="section-label">Time together</div>
+<h2>And the clock keeps counting... ⏳</h2>
+<p class="lead">Since <strong>July 13th, 2026</strong></p>
+<div id="anniversary" class="counter"></div>
+<p class="lead" style="font-size:12px;margin-top:12px">Calculated using Kyrgyzstan time 🇰🇬</p>
+</section>
 
-    <section class="card">
-        <h2>Our Journey Began ❤️</h2>
-        <p><strong>July 13th, 2026</strong></p>
-        <div id="anniversary" class="counter"></div>
-        <p class="note">Calculated using Kyrgyzstan time 🇰🇬</p>
-    </section>
+<section id="birthdayCard" class="glass card birthday reveal">
+<div class="cake">🎂</div>
+<div class="section-label">The big day</div>
+<h2>Counting down to your birthday 🎉</h2>
+<p class="lead"><strong>October 24th, 2026 — midnight in Kyrgyzstan 🇰🇬</strong></p>
+<div id="birthday" class="counter"></div>
+</section>
 
-    <section id="birthdayCard" class="card">
-        <div style="font-size:44px">🎂</div>
-        <h2>Counting Down to Her Birthday 🎉</h2>
-        <p><strong>October 24th, 2026</strong></p>
-        <div id="birthday" class="counter"></div>
-        <p class="note">Birthday time is based on Kyrgyzstan 🇰🇬</p>
-    </section>
-
-    <section class="card secret">
-        <h2>A Secret Message For Her Eyes Only 🤫</h2>
-
-        <div id="locked">
-            <div class="lock">🔒</div>
-            <p>This letter automatically unlocks on <strong>October 24, 2026</strong> at midnight in Kyrgyzstan 🇰🇬.</p>
-        </div>
-
-        <div id="message" class="message"><strong>HAPPY BIRTHDAY ADELELELELELELEE ❤️❤️❤️❤️❤️❤️</strong>
+<section class="glass card secret reveal">
+<div class="letter-icon">💌</div>
+<div class="section-label">Locked with love</div>
+<h2>A secret message for her eyes only 🤫</h2>
+<div id="locked" style="margin-top:16px">
+<div class="lock">🔒</div>
+<p class="lead">This letter unlocks automatically on <strong>October 24, 2026</strong> at midnight in Kyrgyzstan.</p>
+</div>
+<div id="message" class="message"><strong>HAPPY BIRTHDAY ADELELELELELELEE ❤️❤️❤️❤️❤️❤️</strong>
 
 Adele, you are the most important gift of my life. ❤️
 
@@ -208,216 +142,50 @@ I really love you a lot, and I can't always express it properly. I wanna be with
 Please always stay by my side. ❤️
 
 <strong>I LOVE YOU, MY WIFEY. ❤️</strong></div>
-    </section>
+</section>
 
-    <section class="card">
-        <h2>Our Song 🎵</h2>
-        <p class="song-title">Love Story — Indila ❤️</p>
+<section class="glass card song reveal">
+<div class="section-label">Press play</div>
+<h2>Our song 🎵</h2>
+<p class="lead" style="margin-bottom:18px"><strong>Love Story — Indila</strong></p>
+<button id="songButton" class="song-button" onclick="openSong()">💗 Tap to listen</button>
+<div id="youtube" class="youtube"><iframe src="https://www.youtube.com/embed/DF3XjEhJ40Y" title="Love Story - Indila" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+</section>
 
-        <button id="songButton" class="song-button" onclick="openSong()">
-            💗 Tap to listen
-        </button>
+<section class="glass final card reveal">
+<div class="section-label">One last thing</div>
+<div class="quote">“If I could give you one thing, I would give you the ability to see yourself through my eyes.” ❤️</div>
+<p class="lead">Maybe then you'd understand just how special you are to me.</p>
+<div class="signature">Forever & always. 💗</div>
+</section>
 
-        <div id="youtube" class="youtube">
-            <iframe
-                src="https://www.youtube.com/embed/DF3XjEhJ40Y"
-                title="Love Story - Indila"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
+<div class="footer">Made with love, memories & a ridiculous number of hearts. ❤️</div>
+</main>
 
-        <p class="note">A little song for us. ❤️</p>
-    </section>
-
-</div>
-
-<div id="lightbox" class="lightbox" onclick="closePhoto()">
-    <span class="close">×</span>
-    <img id="lightboxImage" src="" alt="Enlarged memory">
-</div>
+<div id="lightbox" class="lightbox" onclick="closePhoto()"><span class="close">×</span><img id="lightboxImage" src="" alt="Enlarged memory"></div>
 
 <script>
-const TIMEZONE = "Asia/Bishkek";
+const TIMEZONE="Asia/Bishkek";
+function partsInZone(date){const ps=new Intl.DateTimeFormat("en-US",{timeZone:TIMEZONE,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(date),o={};for(const p of ps)if(p.type!=="literal")o[p.type]=Number(p.value);return o}
+function kyrgyzDateToUTC(s){const[d,t]=s.split("T"),[y,m,day]=d.split("-").map(Number),[h,min,sec]=t.split(":").map(Number);let ts=Date.UTC(y,m-1,day,h,min,sec);for(let i=0;i<3;i++){const a=partsInZone(new Date(ts)),wanted=h*60+min,actual=a.hour*60+a.minute;ts+=(wanted-actual)*60000}return ts}
+const anniversaryTime=kyrgyzDateToUTC("2026-07-13T00:00:00"),birthdayTime=kyrgyzDateToUTC("2026-10-24T00:00:00");
+const pad=n=>String(n).padStart(2,"0");
+function updateAnniversary(){let d=Date.now()-anniversaryTime;if(d<0)return;const s=Math.floor(d/1000),days=Math.floor(s/86400),hours=Math.floor(s%86400/3600),mins=Math.floor(s%3600/60),secs=s%60;document.getElementById("anniversary").innerHTML=`<div class="box"><span>${days}</span><label>Days</label></div><div class="box"><span>${pad(hours)}</span><label>Hours</label></div><div class="box"><span>${pad(mins)}</span><label>Minutes</label></div><div class="box"><span>${pad(secs)}</span><label>Seconds</label></div>`}
+let unlocked=false;
+function updateBirthday(){const d=birthdayTime-Date.now();if(d<=0){document.getElementById("birthday").innerHTML='<div class="box"><span>🎉</span><label>It\'s</label></div><div class="box"><span>HER</span><label>Birthday</label></div><div class="box"><span>🎂</span><label>Today</label></div>';unlockBirthday();return}const s=Math.floor(d/1000),days=Math.floor(s/86400),hours=Math.floor(s%86400/3600),mins=Math.floor(s%3600/60),secs=s%60;document.getElementById("birthday").innerHTML=`<div class="box"><span>${days}</span><label>Days</label></div><div class="box"><span>${pad(hours)}</span><label>Hours</label></div><div class="box"><span>${pad(mins)}</span><label>Minutes</label></div><div class="box"><span>${pad(secs)}</span><label>Seconds</label></div>`}
+function unlockBirthday(){if(unlocked)return;unlocked=true;document.getElementById("locked").style.display="none";document.getElementById("message").style.display="block";birthdayCelebration()}
+function birthdayCelebration(){const icons=["❤️","💗","💖","✨","🎉","🌹"];for(let i=0;i<90;i++){const e=document.createElement("div");e.className="confetti";e.textContent=icons[Math.floor(Math.random()*icons.length)];e.style.left=Math.random()*100+"vw";e.style.top="-30px";e.style.animationDelay=Math.random()*1.5+"s";document.body.appendChild(e);setTimeout(()=>e.remove(),4000)}}
+function openSong(){document.getElementById("youtube").style.display="block";document.getElementById("songButton").style.display="none"}
+function showPhoto(src){document.getElementById("lightboxImage").src=src;document.getElementById("lightbox").style.display="flex"}
+function closePhoto(){document.getElementById("lightbox").style.display="none"}
+updateAnniversary();updateBirthday();setInterval(updateAnniversary,1000);setInterval(updateBirthday,1000);
 
-function partsInZone(date) {
-    const parts = new Intl.DateTimeFormat("en-US", {
-        timeZone: TIMEZONE,
-        year:"numeric", month:"2-digit", day:"2-digit",
-        hour:"2-digit", minute:"2-digit", second:"2-digit",
-        hourCycle:"h23"
-    }).formatToParts(date);
+const canvas=document.getElementById("hearts"),ctx=canvas.getContext("2d");let hearts=[];
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight}addEventListener("resize",resize);resize();
+class Heart{constructor(anywhere=false){this.x=Math.random()*canvas.width;this.y=anywhere?Math.random()*canvas.height:-30;this.size=Math.random()*10+6;this.speed=Math.random()*1.2+.45;this.opacity=Math.random()*.28+.08;this.t=Math.random()*100;this.swing=Math.random()*.02+.005;this.rot=Math.random()*6.28;this.rs=(Math.random()-.5)*.018}update(){this.y+=this.speed;this.t+=this.swing;this.rot+=this.rs;this.x+=Math.sin(this.t)*.35;if(this.y>canvas.height+25){this.y=-25;this.x=Math.random()*canvas.width}}draw(){ctx.save();ctx.translate(this.x,this.y);ctx.rotate(this.rot);ctx.globalAlpha=this.opacity;ctx.fillStyle="#ff6f91";const s=this.size;ctx.beginPath();ctx.moveTo(0,s*.3);ctx.bezierCurveTo(-s,-s*.3,-s*.5,-s,0,-s*.4);ctx.bezierCurveTo(s*.5,-s,s,-s*.3,0,s*.3);ctx.fill();ctx.restore()}}
+const count=innerWidth<600?28:50;for(let i=0;i<count;i++)hearts.push(new Heart(true));function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);hearts.forEach(h=>{h.update();h.draw()});requestAnimationFrame(animate)}animate();
 
-    const out = {};
-    for (const p of parts) if (p.type !== "literal") out[p.type] = Number(p.value);
-    return out;
-}
-
-function kyrgyzDateToUTC(s) {
-    const [d,t] = s.split("T");
-    const [y,m,day] = d.split("-").map(Number);
-    const [h,min,sec] = t.split(":").map(Number);
-    let ts = Date.UTC(y,m-1,day,h,min,sec);
-
-    for(let i=0;i<3;i++){
-        const a = partsInZone(new Date(ts));
-        const wanted = h*60+min;
-        const actual = a.hour*60+a.minute;
-        ts += (wanted-actual)*60000;
-    }
-    return ts;
-}
-
-const anniversaryTime = kyrgyzDateToUTC("2026-07-13T00:00:00");
-const birthdayTime = kyrgyzDateToUTC("2026-10-24T00:00:00");
-
-function pad(n){return String(n).padStart(2,"0")}
-
-function updateAnniversary(){
-    let d = Date.now() - anniversaryTime;
-    if(d < 0){
-        document.getElementById("anniversary").innerHTML =
-            `<div class="box"><span>0</span><label>Days</label></div>`;
-        return;
-    }
-
-    const s = Math.floor(d/1000);
-    const days = Math.floor(s/86400);
-    const hours = Math.floor((s%86400)/3600);
-    const mins = Math.floor((s%3600)/60);
-    const secs = s%60;
-
-    document.getElementById("anniversary").innerHTML = `
-        <div class="box"><span>${days}</span><label>Days</label></div>
-        <div class="box"><span>${pad(hours)}</span><label>Hours</label></div>
-        <div class="box"><span>${pad(mins)}</span><label>Minutes</label></div>
-        <div class="box"><span>${pad(secs)}</span><label>Seconds</label></div>`;
-}
-
-let unlocked = false;
-
-function updateBirthday(){
-    const d = birthdayTime - Date.now();
-
-    if(d <= 0){
-        document.getElementById("birthday").innerHTML = `
-            <div class="box"><span>🎉</span><label>It's</label></div>
-            <div class="box"><span>HER</span><label>Birthday</label></div>
-            <div class="box"><span>🎂</span><label>Today</label></div>`;
-        unlockBirthday();
-        return;
-    }
-
-    const s = Math.floor(d/1000);
-    const days = Math.floor(s/86400);
-    const hours = Math.floor((s%86400)/3600);
-    const mins = Math.floor((s%3600)/60);
-    const secs = s%60;
-
-    document.getElementById("birthday").innerHTML = `
-        <div class="box"><span>${days}</span><label>Days</label></div>
-        <div class="box"><span>${pad(hours)}</span><label>Hours</label></div>
-        <div class="box"><span>${pad(mins)}</span><label>Minutes</label></div>
-        <div class="box"><span>${pad(secs)}</span><label>Seconds</label></div>`;
-}
-
-function unlockBirthday(){
-    if(unlocked) return;
-    unlocked = true;
-    document.getElementById("locked").style.display = "none";
-    document.getElementById("message").style.display = "block";
-    document.getElementById("birthdayCard").classList.add("birthday-active");
-    birthdayBurst();
-}
-
-function openSong(){
-    document.getElementById("youtube").style.display = "block";
-    document.getElementById("songButton").style.display = "none";
-}
-
-function showPhoto(src){
-    document.getElementById("lightboxImage").src = src;
-    document.getElementById("lightbox").style.display = "flex";
-}
-
-function closePhoto(){
-    document.getElementById("lightbox").style.display = "none";
-}
-
-updateAnniversary();
-updateBirthday();
-setInterval(updateAnniversary,1000);
-setInterval(updateBirthday,1000);
-
-/* Hearts */
-const canvas = document.getElementById("hearts");
-const ctx = canvas.getContext("2d");
-let hearts = [];
-
-function resize(){
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-}
-addEventListener("resize",resize);
-resize();
-
-class Heart{
-    constructor(anywhere=false){
-        this.x=Math.random()*canvas.width;
-        this.y=anywhere ? Math.random()*canvas.height : -30;
-        this.size=Math.random()*11+7;
-        this.speed=Math.random()*1.4+.6;
-        this.opacity=Math.random()*.35+.12;
-        this.time=Math.random()*100;
-        this.swingSpeed=Math.random()*.02+.005;
-        this.rotation=Math.random()*Math.PI*2;
-        this.rotSpeed=(Math.random()-.5)*.02;
-    }
-
-    update(){
-        this.y+=this.speed;
-        this.time+=this.swingSpeed;
-        this.rotation+=this.rotSpeed;
-        this.x+=Math.sin(this.time)*.45;
-
-        if(this.y>canvas.height+30){
-            this.y=-30;
-            this.x=Math.random()*canvas.width;
-        }
-    }
-
-    draw(){
-        ctx.save();
-        ctx.translate(this.x,this.y);
-        ctx.rotate(this.rotation);
-        ctx.globalAlpha=this.opacity;
-        ctx.fillStyle="#ff6f91";
-
-        const s=this.size;
-        ctx.beginPath();
-        ctx.moveTo(0,s*.3);
-        ctx.bezierCurveTo(-s,-s*.3,-s*.5,-s,0,-s*.4);
-        ctx.bezierCurveTo(s*.5,-s,s,-s*.3,0,s*.3);
-        ctx.fill();
-        ctx.restore();
-    }
-}
-
-const count = innerWidth < 600 ? 26 : 45;
-for(let i=0;i<count;i++) hearts.push(new Heart(true));
-
-function animate(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    hearts.forEach(h=>{h.update();h.draw()});
-    requestAnimationFrame(animate);
-}
-animate();
-
-function birthdayBurst(){
-    for(let i=0;i<70;i++) hearts.push(new Heart(true));
-    setTimeout(()=>hearts=hearts.slice(-count),7000);
-}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
 </script>
-
 </body>
 </html>
